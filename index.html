@@ -32,6 +32,8 @@
       rel="stylesheet"
     />
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
 
     <link href="assets/css/main.css" rel="stylesheet" />
   </head>
@@ -99,9 +101,21 @@
             <div>Selected Projects</div>
           </div>
 
+          <div class="row">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <ul id="portfolio-flters">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-design">Graphic Design</li>
+                    <li data-filter=".filter-video">Video Editing</li>
+                    <li data-filter=".filter-photo">Photography</li>
+                </ul>
+            </div>
+          </div>
+
+
           <div class="row portfolio-grid" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-design">
               <a href="#" class="project-link" data-project-id="1">
                 <img src="https://via.placeholder.com/600x400/18d26e/ffffff?text=Project+One" class="img-fluid" alt="Project 1">
                 <div class="portfolio-info">
@@ -111,7 +125,7 @@
               </a>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-video">
                 <a href="#" class="project-link" data-project-id="2">
                   <img src="https://via.placeholder.com/600x400/343a40/ffffff?text=Project+Two" class="img-fluid" alt="Project 2">
                   <div class="portfolio-info">
@@ -121,7 +135,7 @@
                 </a>
               </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-photo">
                 <a href="#" class="project-link" data-project-id="3">
                   <img src="https://via.placeholder.com/600x400/007bff/ffffff?text=Project+Three" class="img-fluid" alt="Project 3">
                   <div class="portfolio-info">
@@ -134,7 +148,43 @@
             </div>
         </div>
       </section>
-      </main>
+      <section id="testimonials" class="testimonials section">
+          <div class="container" data-aos="fade-up">
+            <div class="section-title">
+              <h2>Testimonials</h2>
+              <div>What they are saying about me</div>
+            </div>
+
+            <div class="swiper">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>Nikshep's design work is exceptional. He is creative, professional, and delivered results beyond my expectations. Highly recommended!</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                    <img src="https://via.placeholder.com/100" class="testimonial-img" alt="">
+                    <h3>Client Name</h3>
+                    <h4>CEO of Company</h4>
+                  </div>
+                </div><div class="swiper-slide">
+                    <div class="testimonial-item">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        <span>The promotional video he edited was fantastic. It captured the essence of our brand perfectly and boosted our engagement.</span>
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <img src="https://via.placeholder.com/100" class="testimonial-img" alt="">
+                      <h3>Another Client</h3>
+                      <h4>Marketing Head</h4>
+                    </div>
+                  </div></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </section></main>
 
     <footer id="footer" class="footer dark-background">
       <div class="container">
@@ -187,6 +237,8 @@
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/typed.js/typed.umd.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
 
     <script src="assets/js/main.js"></script>
   </body>
