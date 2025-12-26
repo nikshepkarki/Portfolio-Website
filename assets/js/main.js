@@ -54,7 +54,9 @@
     mobileNavToggleBtn.classList.toggle('bi-list');
     mobileNavToggleBtn.classList.toggle('bi-x');
   }
-  mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+  if (mobileNavToggleBtn) {
+    mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+  }
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -86,15 +88,17 @@
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
   }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  if (scrollTop) {
+    scrollTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
-  });
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
+    window.addEventListener('load', toggleScrollTop);
+    document.addEventListener('scroll', toggleScrollTop);
+  }
 
   /**
    * Animation on scroll function and init
@@ -129,57 +133,89 @@
    * Modal Logic
    */
   const modal = document.getElementById('project-modal');
-  const modalContent = modal.querySelector('.modal-content');
-  const projectLinks = document.querySelectorAll('.project-link');
-  const closeButton = document.querySelector('.close-button');
+  if (modal) {
+      const modalContent = modal.querySelector('.modal-content');
+      const projectLinks = document.querySelectorAll('.project-link');
+      const closeButton = document.querySelector('.close-button');
 
-  // Function to open the modal
-  function openModal(projectId) {
-    const project = projects.find(p => p.id === projectId);
-    if (project) {
-      document.getElementById('modal-img').src = project.imageUrl;
-      document.getElementById('modal-title').textContent = project.title;
-      document.getElementById('modal-description').textContent = project.description;
-      document.getElementById('modal-live-link').href = project.liveLink;
-      document.getElementById('modal-code-link').href = project.codeLink;
-      
-      modal.style.display = 'block';
-    }
+      // Function to open the modal
+      function openModal(projectId) {
+        const project = projects.find(p => p.id === projectId);
+        if (project) {
+          document.getElementById('modal-img').src = project.imageUrl;
+          document.getElementById('modal-title').textContent = project.title;
+          document.getElementById('modal-description').textContent = project.description;
+          document.getElementById('modal-live-link').href = project.liveLink;
+          document.getElementById('modal-code-link').href = project.codeLink;
+
+          modal.style.display = 'block';
+        }
+      }
+
+      // Function to close the modal
+      function closeModal() {
+          modalContent.classList.add('slide-out');
+          modal.classList.add('fade-out');
+
+          setTimeout(() => {
+              modal.style.display = 'none';
+              modalContent.classList.remove('slide-out');
+              modal.classList.remove('fade-out');
+          }, 400);
+      }
+
+      // Event listeners for project links
+      projectLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const projectId = parseInt(this.getAttribute('data-project-id'));
+          openModal(projectId);
+        });
+      });
+
+      // Event listener for close button
+      if (closeButton) {
+        closeButton.addEventListener('click', closeModal);
+      }
+
+      // Event listener to close modal when clicking outside of it
+      window.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
   }
-
-  // Function to close the modal
-  function closeModal() {
-      modalContent.classList.add('slide-out');
-      modal.classList.add('fade-out');
-
-      setTimeout(() => {
-          modal.style.display = 'none';
-          modalContent.classList.remove('slide-out');
-          modal.classList.remove('fade-out');
-      }, 400);
-  }
-
-  // Event listeners for project links
-  projectLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const projectId = parseInt(this.getAttribute('data-project-id'));
-      openModal(projectId);
-    });
-  });
-
-  // Event listener for close button
-  closeButton.addEventListener('click', closeModal);
-
-  // Event listener to close modal when clicking outside of it
-  window.addEventListener('click', function(e) {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
 
   /**
-   * Language Toggle Logic
+   * Theme Toggle Logic
+   */
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Check local storage
+  if (localStorage.getItem('theme') === 'dark') {
+      body.setAttribute('data-theme', 'dark');
+      if (themeToggleBtn) {
+          themeToggleBtn.innerHTML = '<i class="bi bi-sun"></i>';
+      }
+  }
+
+  if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', function() {
+          if (body.getAttribute('data-theme') === 'dark') {
+              body.removeAttribute('data-theme');
+              localStorage.setItem('theme', 'light');
+              themeToggleBtn.innerHTML = '<i class="bi bi-moon"></i>';
+          } else {
+              body.setAttribute('data-theme', 'dark');
+              localStorage.setItem('theme', 'dark');
+              themeToggleBtn.innerHTML = '<i class="bi bi-sun"></i>';
+          }
+      });
+  }
+
+  /**
+   * Language Toggle Logic (Legacy, check if exists)
    */
   const langToggleBtn = document.getElementById('lang-toggle');
   let currentLang = 'en';
