@@ -178,4 +178,45 @@
     }
   });
 
+  /**
+   * Language Toggle Logic
+   */
+  const langToggleBtn = document.getElementById('lang-toggle');
+  let currentLang = 'en';
+
+  function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'ne' : 'en';
+      langToggleBtn.textContent = currentLang === 'en' ? 'NE' : 'EN';
+
+      const enElements = document.querySelectorAll('[data-lang="en"]');
+      const neElements = document.querySelectorAll('[data-lang="ne"]');
+
+      if (currentLang === 'ne') {
+          enElements.forEach(el => el.style.display = 'none');
+          neElements.forEach(el => {
+            if(el.tagName === 'LI' || el.tagName === 'A' || el.tagName === 'SPAN') {
+                el.style.display = 'inline-block';
+            } else {
+                el.style.display = 'block';
+            }
+          });
+      } else {
+          neElements.forEach(el => el.style.display = 'none');
+          enElements.forEach(el => {
+             if(el.tagName === 'LI' || el.tagName === 'A' || el.tagName === 'SPAN') {
+                el.style.display = 'inline-block';
+            } else {
+                el.style.display = 'block';
+            }
+          });
+      }
+  }
+
+  if(langToggleBtn) {
+      langToggleBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        toggleLanguage();
+      });
+  }
+
 })();

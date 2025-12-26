@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Nikshep Karki - Creative Portfolio</title>
+    <title>Nikshep Karki - Political Strategist & Writer</title>
     <meta
       name="description"
-      content="The portfolio of Nikshep Karki, a professional Graphic Designer, Video Editor, and Freelancer."
+      content="The professional portfolio of Nikshep Karki, a Political Strategist and Digital Writer."
     />
     <meta
       name="keywords"
-      content="Nikshep Karki, portfolio, graphic design, video editing, freelance"
+      content="Nikshep Karki, political strategist, writer, digital strategy, Nepal politics"
     />
 
     <link href="assets/logo/N-logo.jpg" rel="icon" />
@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
 
@@ -49,10 +49,13 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="#hero" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#portfolio">Work</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#hero" class="active" data-lang="en">Home</a><a href="#hero" class="active" data-lang="ne" style="display:none;">गृहपृष्ठ</a></li>
+            <li><a href="#about" data-lang="en">About</a><a href="#about" data-lang="ne" style="display:none;">हाम्रो बारेमा</a></li>
+            <li><a href="#portfolio" data-lang="en">Experience</a><a href="#portfolio" data-lang="ne" style="display:none;">अनुभव</a></li>
+            <li><a href="#writing" data-lang="en">Writing</a><a href="#writing" data-lang="ne" style="display:none;">लेखन</a></li>
+            <li><a href="#community" data-lang="en">Community</a><a href="#community" data-lang="ne" style="display:none;">समुदाय</a></li>
+            <li><a href="#footer" data-lang="en">Contact</a><a href="#footer" data-lang="ne" style="display:none;">सम्पर्क</a></li>
+            <li><button id="lang-toggle" class="btn-lang">NE</button></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -66,14 +69,12 @@
         <div class="container" data-aos="zoom-out" data-aos-delay="100">
           <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
-              <h2>Nikshep Karki</h2>
-              <p>
-                A Creative
-                <span
-                  class="typed"
-                  data-typed-items="Graphic Designer, Video Editor, Photographer, Freelancer"
-                ></span>
-              </p>
+              <h2 data-lang="en">Nikshep Karki</h2>
+              <h2 data-lang="ne" style="display:none; font-family: 'Mukta', sans-serif;">निक्षेप कार्की</h2>
+              <p data-lang="en">Political Strategist & Digital Writer</p>
+              <p data-lang="ne" style="display:none; font-family: 'Mukta', sans-serif;">राजनीतिक रणनीतिकार र डिजिटल लेखक</p>
+              <p data-lang="en" style="font-size: 18px; margin-top: 10px;">Bridging Political Ideology with Digital Strategy.</p>
+              <p data-lang="ne" style="display:none; font-size: 18px; margin-top: 10px; font-family: 'Mukta', sans-serif;">राजनीतिक विचार र डिजिटल रणनीति जोड्दै।</p>
               <div class="social-links">
                 <a href="https://x.com/nikshep_karki" target="_blank"
                   ><i class="bi bi-twitter-x"></i
@@ -94,58 +95,120 @@
           </div>
         </div>
       </section>
+
       <section id="portfolio" class="portfolio section">
         <div class="container">
           <div class="section-title" data-aos="fade-up">
-            <h2>My Work</h2>
-            <div>Selected Projects</div>
+            <h2 data-lang="en">Experience</h2>
+            <h2 data-lang="ne" style="display:none; font-family: 'Mukta', sans-serif;">अनुभव</h2>
+            <div data-lang="en">Case Studies & Impact</div>
+            <div data-lang="ne" style="display:none; font-family: 'Mukta', sans-serif;">केस अध्ययन र प्रभाव</div>
           </div>
 
           <div class="row">
             <div class="col-lg-12 d-flex justify-content-center">
                 <ul id="portfolio-flters">
-                    <li data-filter="*" class="filter-active">All</li>
-                    <li data-filter=".filter-design">Graphic Design</li>
-                    <li data-filter=".filter-video">Video Editing</li>
-                    <li data-filter=".filter-photo">Photography</li>
+                    <li data-filter="*" class="filter-active" data-lang="en">All</li>
+                    <li data-filter="*" class="filter-active" data-lang="ne" style="display:none; font-family: 'Mukta', sans-serif;">सबै</li>
+                    <li data-filter=".filter-strategy" data-lang="en">Strategy</li>
+                    <li data-filter=".filter-strategy" data-lang="ne" style="display:none; font-family: 'Mukta', sans-serif;">रणनीति</li>
+                    <li data-filter=".filter-leadership" data-lang="en">Leadership</li>
+                    <li data-filter=".filter-leadership" data-lang="ne" style="display:none; font-family: 'Mukta', sans-serif;">नेतृत्व</li>
                 </ul>
             </div>
           </div>
 
-
           <div class="row portfolio-grid" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-design">
+            <div class="col-lg-6 col-md-6 portfolio-item filter-strategy">
               <a href="#" class="project-link" data-project-id="1">
-                <img src="https://via.placeholder.com/600x400/18d26e/ffffff?text=Project+One" class="img-fluid" alt="Project 1">
                 <div class="portfolio-info">
-                  <h4>Project One</h4>
-                  <p>Graphic Design</p>
+                  <h4 data-lang="en">Madan Bhandari Students' Forum</h4>
+                  <h4 data-lang="ne" style="display:none; font-family: 'Mukta', sans-serif;">मदन भण्डारी विद्यार्थी मञ्च</h4>
+                  <p data-lang="en">Drafted the constitution governing X members.</p>
+                  <p data-lang="ne" style="display:none; font-family: 'Mukta', sans-serif;">X सदस्यहरूलाई शासित गर्ने संविधानको मस्यौदा तयार पारियो।</p>
                 </div>
+                <img src="https://via.placeholder.com/600x400/DC143C/ffffff?text=Constitution+Drafting" class="img-fluid" alt="Madan Bhandari Students' Forum">
               </a>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-video">
+            <div class="col-lg-6 col-md-6 portfolio-item filter-leadership">
                 <a href="#" class="project-link" data-project-id="2">
-                  <img src="https://via.placeholder.com/600x400/343a40/ffffff?text=Project+Two" class="img-fluid" alt="Project 2">
                   <div class="portfolio-info">
-                    <h4>Project Two</h4>
-                    <p>Video Editing</p>
+                    <h4 data-lang="en">CPN-UML Convention</h4>
+                    <h4 data-lang="ne" style="display:none; font-family: 'Mukta', sans-serif;">नेकपा एमाले महाधिवेशन</h4>
+                    <p data-lang="en">Active participation and strategic planning.</p>
+                    <p data-lang="ne" style="display:none; font-family: 'Mukta', sans-serif;">सक्रिय सहभागिता र रणनीतिक योजना।</p>
                   </div>
+                  <img src="https://via.placeholder.com/600x400/2f4f4f/ffffff?text=CPN-UML+Convention" class="img-fluid" alt="CPN-UML Convention">
                 </a>
               </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-photo">
-                <a href="#" class="project-link" data-project-id="3">
-                  <img src="https://via.placeholder.com/600x400/007bff/ffffff?text=Project+Three" class="img-fluid" alt="Project 3">
-                  <div class="portfolio-info">
-                    <h4>Project Three</h4>
-                    <p>Photography</p>
-                  </div>
-                </a>
-            </div>
             
             </div>
+        </div>
+      </section>
+
+      <section id="writing" class="portfolio section">
+        <div class="container">
+          <div class="section-title" data-aos="fade-up">
+            <h2 data-lang="en">Writing</h2>
+            <h2 data-lang="ne" style="display:none; font-family: 'Mukta', sans-serif;">लेखन</h2>
+            <div data-lang="en">Featured Essays</div>
+            <div data-lang="ne" style="display:none; font-family: 'Mukta', sans-serif;">विशेष निबन्धहरू</div>
+          </div>
+          <div class="row">
+              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                  <div class="card border-0 shadow-sm">
+                      <div class="card-body">
+                          <h5 class="card-title" data-lang="en">The Future of Digital Politics in Nepal</h5>
+                          <h5 class="card-title" data-lang="ne" style="display:none; font-family: 'Mukta', sans-serif;">नेपालमा डिजिटल राजनीतिको भविष्य</h5>
+                          <p class="card-text" data-lang="en">An analysis of how social media is shaping political discourse.</p>
+                          <p class="card-text" data-lang="ne" style="display:none; font-family: 'Mukta', sans-serif;">सामाजिक सञ्जालले राजनीतिक विमर्शलाई कसरी आकार दिइरहेको छ भन्ने विश्लेषण।</p>
+                          <a href="#" class="btn btn-sm btn-outline-danger">Read More</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                  <div class="card border-0 shadow-sm">
+                      <div class="card-body">
+                          <h5 class="card-title" data-lang="en">Understanding Grassroots Movements</h5>
+                          <h5 class="card-title" data-lang="ne" style="display:none; font-family: 'Mukta', sans-serif;">तल्लो तहका आन्दोलनहरू बुझ्दै</h5>
+                          <p class="card-text" data-lang="en">Why local engagement matters more than ever.</p>
+                          <p class="card-text" data-lang="ne" style="display:none; font-family: 'Mukta', sans-serif;">स्थानीय संलग्नता किन पहिले भन्दा बढी महत्त्वपूर्ण छ।</p>
+                          <a href="#" class="btn btn-sm btn-outline-danger">Read More</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="community" class="portfolio section">
+        <div class="container">
+          <div class="section-title" data-aos="fade-up">
+            <h2 data-lang="en">Community</h2>
+            <h2 data-lang="ne" style="display:none; font-family: 'Mukta', sans-serif;">समुदाय</h2>
+            <div data-lang="en">Social Impact</div>
+            <div data-lang="ne" style="display:none; font-family: 'Mukta', sans-serif;">सामाजिक प्रभाव</div>
+          </div>
+          <div class="row">
+              <div class="col-lg-12" data-aos="fade-up">
+                  <p data-lang="en">Volunteering at health camps and community service initiatives.</p>
+                  <p data-lang="ne" style="display:none; font-family: 'Mukta', sans-serif;">स्वास्थ्य शिविर र सामुदायिक सेवा पहलहरूमा स्वयंसेवा।</p>
+                  <!-- Add photos of volunteering here -->
+                  <div class="row">
+                      <div class="col-md-4 mb-3">
+                          <img src="https://via.placeholder.com/400x300/f0f0f0/DC143C?text=Health+Camp" class="img-fluid rounded" alt="Health Camp">
+                      </div>
+                      <div class="col-md-4 mb-3">
+                          <img src="https://via.placeholder.com/400x300/f0f0f0/DC143C?text=Volunteering" class="img-fluid rounded" alt="Volunteering">
+                      </div>
+                      <div class="col-md-4 mb-3">
+                          <img src="https://via.placeholder.com/400x300/f0f0f0/DC143C?text=Community+Work" class="img-fluid rounded" alt="Community Work">
+                      </div>
+                  </div>
+              </div>
+          </div>
         </div>
       </section>
       <section id="testimonials" class="testimonials section">

@@ -16,26 +16,26 @@
 
 /* Global Colors */
 :root {
-  --background-color: #000000;
-  --default-color: #fafafa;
-  --heading-color: #ffffff;
-  --accent-color: #18d26e;
-  --surface-color: #1a1a1a;
-  --contrast-color: #000000;
+  --background-color: #ffffff; /* Crisp White */
+  --default-color: #2f4f4f; /* Slate Grey */
+  --heading-color: #2f4f4f; /* Slate Grey */
+  --accent-color: #DC143C; /* Deep Crimson */
+  --surface-color: #f0f0f0;
+  --contrast-color: #ffffff;
 }
 
 /* Nav Menu Colors */
 :root {
-  --nav-color: #fafafa;
-  --nav-hover-color: #18d26e;
-  --nav-mobile-background-color: #1a1a1a;
+  --nav-color: #2f4f4f;
+  --nav-hover-color: #DC143C;
+  --nav-mobile-background-color: #ffffff;
 }
 
 .dark-background {
-  --background-color: rgba(15, 15, 15, 0.975);
+  --background-color: #2f4f4f; /* Slate Grey */
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #292929f9;
+  --surface-color: #1a1a1a;
 }
 
 /* Smooth scroll */
@@ -93,6 +93,24 @@ h1, h2, h3, h4, h5, h6 {
 .scrolled .header {
   background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+}
+
+.btn-lang {
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--nav-color);
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.btn-lang:hover {
+    background: var(--accent-color);
+    color: var(--contrast-color);
 }
 
 /*--------------------------------------------------------------
@@ -567,4 +585,40 @@ section, .section {
 }
 .cta .cta-btn:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+/*--------------------------------------------------------------
+# Portfolio Filters
+--------------------------------------------------------------*/
+#portfolio-flters {
+  padding: 0;
+  margin: 0 auto 25px auto;
+  list-style: none;
+  text-align: center;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+
+#portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--default-color);
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  font-family: var(--heading-font);
+}
+
+#portfolio-flters li:hover,
+#portfolio-flters li.filter-active {
+  color: var(--accent-color);
+}
+
+#portfolio-flters li:last-child {
+  margin-right: 0;
 }
